@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\ProjectListController;
 use \App\Http\Controllers\TaskListController;
+use \App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,11 @@ Route::get('/tasks',[TaskListController::class,'index']);
 Route::post('/tasks',[TaskListController::class,'store']);
 Route::put('/tasks/{id}',[TaskListController::class,'update']);
 Route::delete('/tasks/{id}',[TaskListController::class,'destroy']);
+
+
+Route::get('/test',[UserController::class,'index']);
+Route::post('/register',[UserController::class,'register']);
+Route::post('/login',[UserController::class,'login']);
 
 
 
